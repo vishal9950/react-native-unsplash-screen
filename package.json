@@ -12,6 +12,7 @@
     "axios": "^0.18.0",
     "react": "16.4.1",
     "react-native": "0.56.1",
+    "react-native-immersive": "^1.1.2",
     "unsplash-js": "^4.8.0"
   },
   "devDependencies": {

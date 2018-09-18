@@ -1,7 +1,11 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import {
+  View, Image, StatusBar, Platform,
+} from 'react-native';
 import { toJson } from 'unsplash-js/src/unsplash';
+import { Immersive } from 'react-native-immersive';
 import unsplash from '../helpers/authHelper';
+import styles from './UnSplashScreen.style';
 
 export default class UnSplashScreen extends React.Component {
   constructor(props) {
@@ -12,6 +16,10 @@ export default class UnSplashScreen extends React.Component {
   }
 
   componentWillMount() {
+    if (Platform.OS === 'android') {
+      Immersive.on();
+      Immersive.setImmersive(true);
+    }
     unsplash.photos.getRandomPhoto({ collections: [162468] }).then(toJson).then((json) => {
       this.setState({
         photoJson: json,
@@ -22,11 +30,12 @@ export default class UnSplashScreen extends React.Component {
   render() {
     const { photoJson } = this.state;
     return (
-      <View>
+      <View style={styles.imageContainer}>
+        {Platform.OS === 'ios' && <StatusBar hidden />}
         {photoJson.urls
           ? (
             <Image
-              style={{ width: '100%', height: '100%' }}
+              style={styles.image}
               source={{ uri: photoJson.urls.raw }}
             />
           )
