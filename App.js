@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Text, View,
-} from 'react-native';
+import UnSplashScreen from './src/components/UnSplashScreen.component';
 
 export default class App extends Component {
   constructor(props) {
@@ -11,9 +9,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <View>
-        <Text>Some Text</Text>
-      </View>
+      <UnSplashScreen />
     );
   }
 }
