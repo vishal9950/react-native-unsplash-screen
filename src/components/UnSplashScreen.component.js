@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   View, ImageBackground, StatusBar, Platform, Text,
+  TouchableOpacity, Linking,
 } from 'react-native';
 import { Immersive } from 'react-native-immersive';
 import axios from 'axios';
@@ -41,7 +42,18 @@ export default class UnSplashScreen extends React.Component {
               style={styles.image}
               source={{ uri: photoJson.urls.regular }}
             >
-              <Text style={styles.textLogo}>{logoText}</Text>
+              <View style={styles.outerView}>
+                <Text style={styles.textLogo}>{logoText}</Text>
+                <View style={styles.creditsView}>
+                  <TouchableOpacity onPress={() => { Linking.openURL(`https://unsplash.com/${photoJson.user.username}?utm_source=splash_screen&utm_medium=referral`); }}>
+                    <Text style={styles.creditsText}>{photoJson.user.name}</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity><Text style={styles.creditsText}> | </Text></TouchableOpacity>
+                  <TouchableOpacity onPress={() => { Linking.openURL('https://unsplash.com/?utm_source=splash_screen&utm_medium=referral'); }}>
+                    <Text style={styles.creditsText}>Unsplash</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
             </ImageBackground>
           )
           : null }
@@ -56,5 +68,5 @@ UnSplashScreen.propTypes = {
 };
 
 UnSplashScreen.defaultProps = {
-  logoText: 'Your Logo',
+  logoText: 'MyApp',
 };

@@ -10,10 +10,28 @@ export default StyleSheet.create({
   },
   textLogo: {
     flex: 1,
+    flexDirection: 'row',
     color: 'white',
     textAlign: 'center',
-    paddingTop: 200,
     fontSize: 50,
     fontFamily: 'Lobster-Regular',
+    paddingTop: 150,
+    justifyContent: 'space-around',
+  },
+  outerView: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  creditsView: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    paddingBottom: 50,
+  },
+  creditsText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 12,
+    fontWeight: 'bold',
   },
 });
