@@ -23,9 +23,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   creditsView: {
-    flex: 1,
     flexDirection: 'row',
-    alignItems: 'flex-end',
     paddingBottom: 50,
   },
   creditsText: {
@@ -33,5 +31,11 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 12,
     fontWeight: 'bold',
+  },
+  creditsRightAlign: {
+    textAlign: 'right',
+  },
+  creditsLeftAlign: {
+    textAlign: 'left',
   },
 });

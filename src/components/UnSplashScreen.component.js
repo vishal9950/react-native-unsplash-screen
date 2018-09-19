@@ -45,12 +45,18 @@ export default class UnSplashScreen extends React.Component {
               <View style={styles.outerView}>
                 <Text style={styles.textLogo}>{logoText}</Text>
                 <View style={styles.creditsView}>
-                  <TouchableOpacity onPress={() => { Linking.openURL(`https://unsplash.com/${photoJson.user.username}?utm_source=splash_screen&utm_medium=referral`); }}>
-                    <Text style={styles.creditsText}>{photoJson.user.name}</Text>
+                  <TouchableOpacity
+                    style={{ flex: 1 }}
+                    onPress={() => { Linking.openURL(`https://unsplash.com/${photoJson.user.username}?utm_source=splash_screen&utm_medium=referral`); }}
+                  >
+                    <Text style={[styles.creditsText, styles.creditsRightAlign]}>{photoJson.user.name}</Text>
                   </TouchableOpacity>
                   <TouchableOpacity><Text style={styles.creditsText}> | </Text></TouchableOpacity>
-                  <TouchableOpacity onPress={() => { Linking.openURL('https://unsplash.com/?utm_source=splash_screen&utm_medium=referral'); }}>
-                    <Text style={styles.creditsText}>Unsplash</Text>
+                  <TouchableOpacity
+                    style={{ flex: 1 }}
+                    onPress={() => { Linking.openURL('https://unsplash.com/?utm_source=splash_screen&utm_medium=referral'); }}
+                  >
+                    <Text style={[styles.creditsText, styles.creditsLeftAlign]}>Unsplash</Text>
                   </TouchableOpacity>
                 </View>
               </View>
