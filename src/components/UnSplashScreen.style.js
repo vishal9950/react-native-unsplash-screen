@@ -8,4 +8,12 @@ export default StyleSheet.create({
   image: {
     flex: 1,
   },
+  textLogo: {
+    flex: 1,
+    color: 'white',
+    textAlign: 'center',
+    paddingTop: 200,
+    fontSize: 50,
+    fontFamily: 'Lobster-Regular',
+  },
 });

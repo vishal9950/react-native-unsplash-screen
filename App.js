@@ -9,7 +9,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <UnSplashScreen />
+      <UnSplashScreen
+        clientId="YOUR_ACCESS_KEY"
+        logoText="Hipsterage"
+      />
     );
   }
 }

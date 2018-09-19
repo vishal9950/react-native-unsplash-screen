@@ -5,15 +5,20 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "android": "react-native run-android"
+  },
+  "rnpm": {
+    "assets": [
+      "./fonts"
+    ]
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
     "react": "16.4.1",
     "react-native": "0.56.1",
-    "react-native-immersive": "^1.1.2",
-    "unsplash-js": "^4.8.0"
+    "react-native-immersive": "^1.1.2"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
