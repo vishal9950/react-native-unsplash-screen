@@ -38,4 +38,7 @@ export default StyleSheet.create({
   creditsLeftAlign: {
     textAlign: 'left',
   },
+  creditsTouchable: {
+    flex: 1,
+  },
 });
