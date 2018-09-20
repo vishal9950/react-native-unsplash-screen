@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UnSplashScreen from './src/components/UnSplashScreen.component';
+import UnSplashScreen from './components/UnSplashScreen.component';
 
 export default class App extends Component {
   constructor(props) {

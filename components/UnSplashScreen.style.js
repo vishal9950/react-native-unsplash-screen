@@ -23,7 +23,6 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   creditsView: {
-    flexDirection: 'row',
     paddingBottom: 50,
   },
   creditsText: {
@@ -31,6 +30,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     fontSize: 12,
     fontWeight: 'bold',
+    width: '100%',
   },
   creditsRightAlign: {
     textAlign: 'right',
@@ -39,6 +39,10 @@ export default StyleSheet.create({
     textAlign: 'left',
   },
   creditsTouchable: {
-    flex: 1,
+    width: 100,
+    alignItems: 'center',
+  },
+  loader: {
+    paddingBottom: 30,
   },
 });
