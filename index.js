@@ -1,5 +1,1 @@
-import UnSplashScreen from './components/UnSplashScreen.component';
-
-export default {
-  UnSplashScreen,
-};
+module.exports = require('./components/UnSplashScreen.component');
