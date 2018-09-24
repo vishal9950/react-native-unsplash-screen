@@ -15,9 +15,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "prop-types": "^15.6.2",
-    "react": "16.4.1",
-    "react-native": "0.56.1",
     "react-native-immersive": "^1.1.2"
   },
   "devDependencies": {
