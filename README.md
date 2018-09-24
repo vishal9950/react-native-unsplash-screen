@@ -43,7 +43,7 @@ export default class App extends Component {
 
 ...and voila
 
-<img src="https://github.com/vishal9950/react-native-unsplash-screen/blob/master/sample/voila.gif" height= "437" width="213">
+<img src="https://github.com/vishal9950/react-native-unsplash-screen/raw/master/sample/voila.gif" height= "437" width="213" />
 
 Note that it is just a component, so you can go all crazy about how you are gonna use it. I personally used it as a splash screen as well as a loading screen 👌🏻.
 
