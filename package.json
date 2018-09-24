@@ -14,8 +14,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "react-native-immersive": "^1.1.2"
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

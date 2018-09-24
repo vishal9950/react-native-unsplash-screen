@@ -3,7 +3,6 @@ import {
   View, ImageBackground, StatusBar, Platform, Text,
   TouchableOpacity, Linking, ActivityIndicator,
 } from 'react-native';
-import { Immersive } from 'react-native-immersive';
 import axios from 'axios';
 import { PropTypes } from 'prop-types';
 import styles from './UnSplashScreen.style';
@@ -17,10 +16,6 @@ export default class UnSplashScreen extends React.Component {
   }
 
   componentWillMount() {
-    if (Platform.OS === 'android') {
-      Immersive.on();
-      Immersive.setImmersive(true);
-    }
     const { clientId } = this.props;
     axios.get(`https://api.unsplash.com/photos/random/?client_id=${clientId}&collections=162468`)
       .then((photo) => {
@@ -35,7 +30,6 @@ export default class UnSplashScreen extends React.Component {
     const { logoText } = this.props;
     return (
       <View style={styles.imageContainer}>
-        {Platform.OS === 'ios' && <StatusBar hidden />}
         {photoJson.urls
           ? (
             <ImageBackground
