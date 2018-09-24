@@ -1,13 +1,35 @@
 {
   "name": "react-native-unsplash-screen",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "private": false,
+  "description": "Splash screen using Unsplash API",
+  "keywords": [
+    "react-native",
+    "splash screen",
+    "unsplash",
+    "loading",
+    "screen",
+    "react",
+    "native",
+    "android",
+    "ios"
+  ],
+  "homepage": "https://github.com/vishal9950/react-native-unsplash-screen",
+  "author": "vishal9950",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "ios": "react-native run-ios --simulator=\"iPhone X\"",
     "android": "react-native run-android"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishal9950/react-native-unsplash-screen"
+  },
+  "bugs": {
+    "url": "https://github.com/vishal9950/react-native-unsplash-screen/issues"
+  },
+  "license": "MIT",
   "rnpm": {
     "assets": [
       "./fonts"
